@@ -18,8 +18,19 @@ function App() {
   useEffect(() => {
     fetchApi();
   }, []);
+
+  const [favorites, setFavorites] = useState([]);
+
+  const handleFavorites = (film) => {
+    if (!favorites.includes(film)) {
+      setFavorites((prev) => [...prev, film]);
+    } else {
+      setFavorites((prev) => prev.filter((e) => e !== film));
+    }
+  };
+
   return (
-    <FilmsContext.Provider value={ { films } }>
+    <FilmsContext.Provider value={ { films, favorites, handleFavorites } }>
       <Switch>
         <Route exact path="/" component={ Home } />
         <Route path="/favorites" component={ Favorites } />

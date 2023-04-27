@@ -3,7 +3,8 @@ import Header from '../components/Header';
 import FilmsContext from '../context/FilmsContext';
 
 export default function Home() {
-  const { films } = useContext(FilmsContext);
+  const { films, handleFavorites } = useContext(FilmsContext);
+
   return (
     <>
       <Header />
@@ -14,7 +15,7 @@ export default function Home() {
             <h2>{film.title}</h2>
             <img src={ film.image } alt={ film.title } />
             <p>{film.description}</p>
-            <button>Favoritar</button>
+            <button onClick={ () => handleFavorites(film) }>Favoritar</button>
           </div>
         ))
       }
