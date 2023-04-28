@@ -1,0 +1,83 @@
+.films {
+  display: grid;
+  grid-template-columns: auto auto auto ;
+  gap: 4px;
+  justify-content: space-around;
+}
+
+.films .film-card {
+  max-width: 160px;
+  max-height: 400px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  position: relative;
+  align-items: center;
+}
+
+.film-title {
+  height: 26px;
+  text-align: center;
+}
+.films .film-image {
+  width: 100%;
+  position: relative;
+}
+
+.film-description {
+  display: none;
+  position: absolute;
+  background-color: rgba(240, 248, 255, 0.723);
+  z-index: 1000;
+}
+
+.films .film-card .film-image:hover ~ .film-description {
+  display: block;
+}
+
+.films button {
+  height: 40px;
+  width: fit-content;
+  background-color: unset;
+  border: none;
+  cursor: pointer;
+}
+
+.films button .icon {
+  font-size: 24px;
+}
+
+.films .favorite {
+  color: red;
+  transition: all;
+  transition-duration: 150ms;
+}
+
+.films .unfavorite {
+  transition: all;
+  transition-duration: 150ms;
+}
+
+.films button:hover .unfavorite {
+  color: red;
+}
+
+@media only screen and (min-width: 768px) {
+  .films {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .films {
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+  .films {
+    grid-template-columns: auto auto auto auto auto auto auto;
+  }
+}

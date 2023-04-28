@@ -1,11 +1,11 @@
-header {
+.header {
   background-color: #007DF9;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-header .link {
+.header .link {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,7 +15,10 @@ header .link {
   font-weight: 600;
 }
 
-header .icon {
-  color: rgb(0, 255, 238);
+.header .link {
+  color: rgb(18, 253, 238);
 }
 
+.header .link:hover {
+  color: rgb(0, 255, 174);
+}
