@@ -1,0 +1,21 @@
+header {
+  background-color: #007DF9;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header .link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+header .icon {
+  color: rgb(0, 255, 238);
+}
+
